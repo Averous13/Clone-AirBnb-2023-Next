@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import RegisterModal from "./components/modal/RegisterModal";
@@ -7,7 +7,8 @@ import ToasterProvider from "./providers/ToasterProvider";
 import LoginModal from "./components/modal/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 
-const font = Inter(
+
+const font = Nunito(
   {subsets: ['latin']}
 )
 

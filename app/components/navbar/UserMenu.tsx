@@ -6,14 +6,14 @@ import { useCallback, useState } from "react";
 import MenuItem from "./MenuItem";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import useLoginModal from "@/app/hooks/useLoginModal";
-import { User } from "@/app/generated/prisma/client";
 import { signOut } from "next-auth/react";
+import { safeUser } from "@/app/types";
 
 interface UserMenuProps {
-  currentUser?: User | null;
+  currentUser?: safeUser | null;
 }
 
-const UserMenu: React.FC<User> = ({
+const UserMenu: React.FC<UserMenuProps> = ({
   currentUser
 }) => {
   const registerModal = useRegisterModal();
@@ -40,7 +40,7 @@ const UserMenu: React.FC<User> = ({
         >
           <Menu size={18}/>
           <div className="hidden md:block">
-            <Avatar />
+            <Avatar src={currentUser?.image}/>
           </div>
         </div>
       </div>
