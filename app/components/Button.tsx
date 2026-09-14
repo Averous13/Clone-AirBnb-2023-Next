@@ -1,6 +1,7 @@
 'use client'
 
 import { LucideIconNode } from "lucide-react";
+import { IconType } from "react-icons";
 
 interface ButtonProps {
   label: string;
@@ -8,7 +9,7 @@ interface ButtonProps {
   disabled?: boolean;
   outline?: boolean;
   small?: boolean;
-  icon?: LucideIconNode;
+  icon?: IconType;
 }
 
 
