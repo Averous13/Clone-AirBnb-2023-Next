@@ -1,10 +1,11 @@
 'use client'
 
 import Container from "@/app/Container"
+import CategoryBox from "../CategoryBox"
+
 import { GiBarn, GiBoatFishing, GiCactus, GiCastle, GiCaveEntrance, GiForestCamp, GiIsland, GiWindmill } from "react-icons/gi"
 import { MdOutlineVilla } from "react-icons/md"
 import { TbBeach, TbMountain, TbPool } from "react-icons/tb"
-import CategoryBox from "../CategoryBox"
 import { usePathname, useSearchParams } from "next/navigation"
 import { FaSkating } from "react-icons/fa"
 import { BsSnow } from "react-icons/bs"
@@ -96,8 +97,6 @@ const Categories = () => {
   const isMainPage = pathName === '/';
 
   if (!isMainPage) return null;
-
-
 
   return (
     <Container>
