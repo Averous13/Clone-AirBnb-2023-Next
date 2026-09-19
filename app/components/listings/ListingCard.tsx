@@ -7,13 +7,13 @@ import Image from "next/image";
 import HeartButton from "../HeartButton";
 
 import { Listing, Reservation } from "@/app/generated/prisma/client";
-import { safeUser } from "@/app/types";
+import { safeUser,safeListings } from "@/app/types";
 
 import { format } from "date-fns";
 import Button from "../Button";
 
 interface ListingCardProps {
-  data: Listing;
+  data: safeListings
   reservation?: Reservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
